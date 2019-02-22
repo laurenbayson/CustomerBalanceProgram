@@ -96,7 +96,7 @@ int main(){
   Richest(N,P);
 
   cout<<"Enter your full name to deposit money: ";
-  cin>>fullName;
+  getline(cin,fullName);
 
   Deposit(fullName,N,P);
   NewCopy("data.txt",N,P);
