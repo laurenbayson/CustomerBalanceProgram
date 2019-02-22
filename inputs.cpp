@@ -11,7 +11,6 @@ struct PERSON{
   float Balance;
 };
 
-//counting the records
 int counter(){
   int number = 0;
   string line;
@@ -24,7 +23,7 @@ int counter(){
     return number;
 }
 
-void fillStruct (int N, PERSON P[]){
+void fill(int N, PERSON P[]){
   string first,last,t;
   double num;
   ifstream file("data.txt");
@@ -49,11 +48,11 @@ void Display(int N, PERSON P[]){
 
 void Richest(int N, PERSON P[]){
   int rich;
-  double lo;
+  double b;
 
   for(int i=0; i<N; i++){
-    if(P[i].Balance > lo){
-      lo = P[i].Balance;
+    if(P[i].Balance > b){
+      b = P[i].Balance;
       rich = i;
     }
   }
@@ -92,7 +91,7 @@ int main(){
   int N = counter();
   PERSON P[N];
 
-  fillStruct(N,P);
+  fill(N,P);
   Display(N,P);
   Richest(N,P);
 
